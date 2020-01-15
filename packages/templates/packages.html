@@ -6,10 +6,17 @@
     <div class="col-12 col-md-2 col-md-offset-1">
         <h3>{{ package.name }}</h3>
         <p>{{ package.price }}</p>
-        <!--<form method="post" action="{% url 'add_to_cart' package.id %}">
+        <p>{{ package.domains }}</p>
+        <p>{{ package.mail_space }}</p>
+        <p>{{ package.mail_address }}</p>
+        <p>{{ package.hosting_space }}</p>
+        <p>{{ package.hosting_databases }}</p>
+        <p>{{ package.apps }}</p>
+        <p>{{ package.sftp }}</p>
+        <form method="post" action="{% url 'add_to_cart' package.id %}">
             {% csrf_token %}
-            <button class="btn btn-success" type="submit">Buy</button>
-        </form>-->
+            <button class="btn btn-success" type="submit">Add</button>
+        </form>
     </div>
 {% endfor %}
 </div>
