@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load bootstrap_tags %}
+{% block content %}
+
+<div class="row">
+    <div class="col-12 col-md-8">
+    {% for item in cart_items %}
+    
+    <h3>{{ item.product.name }}</h3>
+    <p>{{ item.product.price }}</p>
+
+    <p>
+        <form class="form" method="post" action="{% url 'adjust_cart' item.id %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="exampleInputAmount" class="sr-only">New Qty</label>
+                <div class="input-group">
+                    <div class="input-group-addon">Qty</div>
+                    <input name="quantity" type="number" min="0" max="999" class="form-control">
+                    <div class="input-group-addon">{{ item.quantity }}</div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Amend</button>
+        </form>
+    </p>
+    {% endfor %}
+    </div>
+</div>
+<div class="row">
+    <p>Total</p>
+    <p>€ {{ total }}</p>
+    <a href="/" class="btn btn-success" role="button">Checkout</a>
+</div>
+
+{% endblock %}
