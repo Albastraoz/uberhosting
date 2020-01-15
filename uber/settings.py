@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '8b)7kga88lc7$)!1y-j8%lcoe47*z7^mzvlg+8*6e22-lb30_e'
+SECRET_KEY = 'b*pqd^=**-yzy!q8cyf8*ht_tk=)^8@b42ncs_eogn4-pc)-sh'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_forms_bootstrap',
     'accounts',
+    'packages',
 ]
 
 MIDDLEWARE = [
@@ -127,5 +128,3 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
     )
-
-MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
