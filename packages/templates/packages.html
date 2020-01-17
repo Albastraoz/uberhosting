@@ -1,22 +1,35 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="row">
+<div class="row justify-content-center background-grey">
 {% for package in packages %}
-    <div class="col-12 col-md-2 col-md-offset-1">
-        <h3>{{ package.name }}</h3>
-        <p>{{ package.price }}</p>
-        <p>{{ package.domains }}</p>
-        <p>{{ package.mail_space }}</p>
-        <p>{{ package.mail_address }}</p>
-        <p>{{ package.hosting_space }}</p>
-        <p>{{ package.hosting_databases }}</p>
-        <p>{{ package.apps }}</p>
-        <p>{{ package.sftp }}</p>
-        <form method="post" action="{% url 'add_to_cart' package.id %}">
-            {% csrf_token %}
-            <button class="btn btn-success" type="submit">Add</button>
-        </form>
+    <div class="col-12 col-md-2 col-md-offset-1 package-box">
+        <div class="package-header">
+            <h3>{{ package.name }}</h3>
+        </div>
+        <div class="package-content">
+            <div class="text-center">
+                <p class="d-inline-block">€ </p><h4 class="d-inline-block">{{ package.price }}</h4><p class="d-inline-block"> /mo</p>
+            </div>          
+            <form method="post" action="{% url 'add_to_cart' package.id %}" class="text-center">
+                {% csrf_token %}
+                <button class="btn btn-success" type="submit">Add to cart</button>
+            </form>
+            <h4>Domains</h4>
+            <p>Domains: {{ package.domains }}</p>
+            <h4>Email</h4>
+            <p>Storage: {{ package.mail_space }}<br>
+            Addresses{{ package.mail_address }}</p>
+            <h4>Hosting</h4>
+            <p>Storage: {{ package.hosting_space }}<br>
+            Databases: {{ package.hosting_databases }}<br>
+            {% if package.apps == false %}
+                Apps: {{ package.apps }}<br>
+            {% endif %}
+            {% if package.sftp == 0 %}
+                SFTP: {{ package.sftp }}</p>
+            {% endif %}
+        </div>
     </div>
 {% endfor %}
 </div>

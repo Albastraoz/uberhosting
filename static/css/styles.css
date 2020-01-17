@@ -1,6 +1,10 @@
 body {
     font-family: Arial;
-    padding-top: 100px;
+    padding-top: 120px;
+}
+
+.background-grey {
+    background-color: #DADADA;
 }
 
 footer {
@@ -13,7 +17,6 @@ footer {
 
 /* NAVBAR */
 .navbar {
-    max-height: 40px;
     padding-top: 0;
     padding-bottom: 0;
     padding-right: 16px;
@@ -21,20 +24,55 @@ footer {
 }
 
 .nav-link {
-    color: #fafafa;
     display: inline-block;
 }
 
-.nav-link:hover {
+.nav-link-light {
+    color: #000000;
+}
+
+.nav-link-light:hover {
+    color: #10DE0C;
+}
+
+.nav-link-dark {
+    color: #fafafa;
+    padding-left: 8px;
+}
+
+.nav-link-dark:hover {
     color: #A9A9A9;
 }
 
-.fixed-top{
+.hover-white:hover {
+    color: #fafafa;
+}
+
+.first-nav{
+    color: #fafafa;
+    max-height: 40px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 16px;
+    padding-left: 120px;
     top: 30px;
+}
+
+.second-nav{
+    font-size: 20px;
+    top: 70px;
+}
+
+.bg-light {
+    background-color: #ffffff !important;
 }
 
 .bg-dark {
     background-color: #000000 !important;
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 .header-logo {
@@ -46,6 +84,25 @@ footer {
 }
 
 /* OTHER STYLING */
+.package-header {
+    color: #fafafa;
+    background-color: #000000;
+    text-align: center;
+    padding: 5px;
+}
+
+.package-content {
+    color: #000000;
+    background-color: #fafafa;
+    padding: 5px;
+}
+
+.package-box {
+    max-width: 160px;
+    padding: 5px;
+    margin: 15px;
+}
+
 .icon-bar {
     background-color: #fff;
 }

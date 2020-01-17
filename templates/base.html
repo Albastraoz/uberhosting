@@ -19,33 +19,43 @@
     <!--HEADER-->
     <header>
         <a href="/"><img src="/static/images/logo.png" class="header-logo" alt="Logo website and link to homepage"></a>
-        <nav class="container-fluid fixed-top navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid fixed-top first-nav bg-dark d-none d-lg-block">
+            <span class="nav-link nav-link-dark hover-white">HOSTING</span>
+            {% if user.is_authenticated %}
+            <span class="float-right"><a href="/" class="nav-link nav-link-dark">My
+                    Profile</a> / <a href="/" class="nav-link nav-link-dark pr-0">Logout</a></span>
+            {% else %}
+            <span class="float-right"><a href="/" class="nav-link nav-link-dark">Login</a> / <a
+                    href="/" class="nav-link nav-link-dark pr-0">Signup</a></span>
+            {% endif %}
+        </div>
+        <nav class="container-fluid fixed-top second-nav navbar navbar-expand-lg bg-light">
             <button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarMobileDropdown" aria-controls="navbarMobileDropdown" aria-expanded="false"
-                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span class="navbar-toggler-icon"></button>
             <div class="collapse navbar-collapse" id="navbarMobileDropdown">
                 <ul class="navbar-nav">
                     {% if user.is_authenticated %}
-                    <li class="nav-item mr-3 d-lg-none"><a href="/" class="nav-link">My Profile</a></li>
-                    <li class="nav-item mr-3 d-lg-none"><a href="/" class="nav-link">Logout</a></li>
+                    <li class="nav-item mr-3 d-lg-none"><a href="/" class="nav-link nav-link-light">My Profile</a></li>
+                    <li class="nav-item mr-3 d-lg-none"><a href="/" class="nav-link nav-link-light">Logout</a></li>
                     {% else %}
-                    <li class="nav-item mr-3 d-lg-none"><a href="/" class="nav-link">Login</a></li>
-                    <li class="nav-item mr-3 d-lg-none"><a href="/" class="nav-link">Signup</a></li>
+                    <li class="nav-item mr-3 d-lg-none"><a href="/" class="nav-link nav-link-light">Login</a></li>
+                    <li class="nav-item mr-3 d-lg-none"><a href="/" class="nav-link nav-link-light">Signup</a></li>
                     {% endif %}
-                    <li class="nav-item mr-3"><a href="/" class="nav-link">Packages</a></li>
-                    <li class="nav-item mr-3"><a href="/" class="nav-link">About us</a></li>
-                    <li class="nav-item mr-3"><a href="/" class="nav-link">Contact</a></li>
+                    <li class="nav-item mr-3"><a href="/" class="nav-link  nav-link-light">Packages</a></li>
+                    <li class="nav-item mr-3"><a href="/" class="nav-link  nav-link-light">About us</a></li>
+                    <li class="nav-item mr-3"><a href="/" class="nav-link  nav-link-light">Contact</a></li>
                 </ul>
             </div>
-            <div class="d-none d-lg-block">
+            <!--<div class="d-none d-lg-block">
                 {% if user.is_authenticated %}
-                <span class="nav-link pr-0"><a href="/" class="nav-link">My
-                        Profile</a> / <a href="/" class="nav-link pr-0">Logout</a></span>
+                <span class="nav-link pr-0"><a href="/" class="nav-link nav-link-dark">My
+                        Profile</a> / <a href="/" class="nav-link nav-link-dark pr-0">Logout</a></span>
                 {% else %}
-                <span class="nav-link pr-0"><a href="/" class="nav-link">Login</a> / <a
-                        href="/" class="nav-link pr-0">Signup</a></span>
+                <span class="nav-link pr-0"><a href="/" class="nav-link nav-link-dark">Login</a> / <a
+                        href="/" class="nav-link nav-link-dark pr-0">Signup</a></span>
                 {% endif %}
-            </div>
+            </div>-->
         </nav>
     </header>
 
