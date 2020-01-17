@@ -6,15 +6,66 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Uber Hosting</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/cerulean/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
+    <!--HERE I IMPORTED BOOTSTRAP 4.3 STYLESHEET SOURCE: https://getbootstrap.com/docs/4.3/getting-started/download/-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--HERE I IMPORT MY OWN STYLESHEET TO OVERLAP BOOTSTRAPS STYLES AND CREATE MY OWN-->
+    <link rel="stylesheet" href="/static/css/styles.css">
+
 </head>
 <body>
     
+    <!--HEADER-->
+    <header>
+        <a href="/"><img src="/static/images/logo.png" class="header-logo" alt="Logo website and link to homepage"></a>
+        <nav class="container-fluid fixed-top navbar navbar-expand-lg bg-dark">
+            <button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarMobileDropdown" aria-controls="navbarMobileDropdown" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarMobileDropdown">
+                <ul class="navbar-nav">
+                    {% if user.is_authenticated %}
+                    <li class="nav-item mr-3 d-lg-none"><a href="/" class="nav-link">My Profile</a></li>
+                    <li class="nav-item mr-3 d-lg-none"><a href="/" class="nav-link">Logout</a></li>
+                    {% else %}
+                    <li class="nav-item mr-3 d-lg-none"><a href="/" class="nav-link">Login</a></li>
+                    <li class="nav-item mr-3 d-lg-none"><a href="/" class="nav-link">Signup</a></li>
+                    {% endif %}
+                    <li class="nav-item mr-3"><a href="/" class="nav-link">Packages</a></li>
+                    <li class="nav-item mr-3"><a href="/" class="nav-link">About us</a></li>
+                    <li class="nav-item mr-3"><a href="/" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="d-none d-lg-block">
+                {% if user.is_authenticated %}
+                <span class="nav-link pr-0"><a href="/" class="nav-link">My
+                        Profile</a> / <a href="/" class="nav-link pr-0">Logout</a></span>
+                {% else %}
+                <span class="nav-link pr-0"><a href="/" class="nav-link">Login</a> / <a
+                        href="/" class="nav-link pr-0">Signup</a></span>
+                {% endif %}
+            </div>
+        </nav>
+    </header>
+
     {% block content %}
     {% endblock %}
 
+
+
+    <!--HERE I IMPORTED BOOTSTRAPS JAVASCRIPT SOURCE: https://getbootstrap.com/docs/4.3/getting-started/download/-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!--HERE I IMPORT FONT AWESOME TO USE FOR ICONS SOURCE: https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use-->
+    <script src="https://kit.fontawesome.com/5d737143b8.js" crossorigin="anonymous"></script>
 </body>
 </html>
