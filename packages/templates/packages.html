@@ -16,18 +16,19 @@
                 <button class="btn btn-success" type="submit">Add to cart</button>
             </form>
             <h4>Domains</h4>
-            <p>Domains: {{ package.domains }}</p>
-            <h4>Email</h4>
-            <p>Storage: {{ package.mail_space }}<br>
-            Addresses{{ package.mail_address }}</p>
+            <p>{{ package.domains }} domain<br>
+            1 SSL-certificate</p>
+            <h4>Mail</h4>
+            <p>{{ package.mail_space }} GB mailspace<br>
+            {{ package.mail_address }} Addresses</p>
             <h4>Hosting</h4>
-            <p>Storage: {{ package.hosting_space }}<br>
-            Databases: {{ package.hosting_databases }}<br>
+            <p>{{ package.hosting_space }} GB webspace<br>
+            {{ package.hosting_databases }} databases<br>
             {% if package.apps == false %}
-                Apps: {{ package.apps }}<br>
+                {{ package.apps }}<br>
             {% endif %}
             {% if package.sftp == 0 %}
-                SFTP: {{ package.sftp }}</p>
+                {{ package.sftp }} SFTP-accounts</p>
             {% endif %}
         </div>
     </div>
