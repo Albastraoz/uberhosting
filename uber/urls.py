@@ -18,12 +18,12 @@ from django.contrib import admin
 from accounts import urls as urls_accounts
 from packages import urls as urls_packages
 from cart import urls as urls_cart
-from packages.views import all_packages
+from home.views import index
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', all_packages, name='index'),
+    url(r'^$', index, name='index'),
     url(r'^accounts/', include(urls_accounts)),
     url(r'^packages/', include(urls_packages)),
     url(r'^cart/', include(urls_cart)),

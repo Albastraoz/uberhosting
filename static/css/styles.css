@@ -80,14 +80,30 @@ footer {
 }
 
 .header-logo {
-    position: absolute;
+    position: fixed;
     top: 0;
     max-height: 40px;
     margin: 5px 20px;
     z-index: 1040;
 }
 
+.background-white {
+    background-color: #ffffff;
+    height: 30px;
+}
+
 /* OTHER STYLING */
+.intro-image {
+    width: 100%;
+    height: auto;
+    
+}
+
+.intro-image-div {
+    max-height: 800px;
+    overflow: hidden;
+}
+
 .package-header {
     color: #fafafa;
     background-color: #000000;
