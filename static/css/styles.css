@@ -104,6 +104,10 @@ footer {
     overflow: hidden;
 }
 
+.fa-plus {
+    color: #10DE0C;
+}
+
 .package-header {
     color: #fafafa;
     background-color: #000000;

@@ -18,8 +18,7 @@ from django.contrib import admin
 from accounts import urls as urls_accounts
 from packages import urls as urls_packages
 from cart import urls as urls_cart
-from home.views import index
-
+from uber.views import index
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
