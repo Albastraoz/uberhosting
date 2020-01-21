@@ -57,7 +57,64 @@
     {% block content %}
     {% endblock %}
 
-
+    <!--FOOTER-->
+    <footer class="container-fluid pr-0 pl-0">
+        <div class="row footer-settings justify-content-md-center pt-5 pb-2">
+            <!--NAVIGATIONAL SITEMAP-->
+            <div class="col-12 col-md-2 d-none d-lg-block pb-3">
+                <h3>SITEMAP</h3>
+                <ul>
+                    <li><a href="{% url 'index' %}" class="footer-link">Home</a></li>
+                    <li><a href="{% url 'packages' %}" class="footer-link">Packages</a></li>
+                    <li><a href="/" class="footer-link">About us</a></li>
+                    <li><a href="/" class="footer-link">Contact</a></li>
+                </ul>
+            </div>
+            <!--CONTACT INFORMATION-->
+            <div class="col-12 col-md-6 col-lg-4 pb-3">
+                <h3>CONTACT</h3>
+                <p class="footer-paragraph">EMAIL: info@uberhosting.com</p>
+                <p class="footer-paragraph">PHONE: 0123456789</p>
+                <p class="footer-paragraph">ADDRESS:</p>
+                <p class="footer-paragraph">Uberstreet 25</p>
+                <p class="footer-paragraph">20412 Greenwall, England</p>
+            </div>
+            <!--LINKS TO ALL SOCIAL MEDIA PAGES-->
+            <div class="col-12 col-md-4 col-lg-3 pb-3 footer-section">
+                <h3>FOLLOW US</h3>
+                <ul class="list-inline social-media">
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/robin.kaal" target="_blank">
+                            <i class="fab fa-facebook-f fa-2x" aria-hidden="true"></i>
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://twitter.com/robin_kaal" target="_blank">
+                            <i class="fab fa-twitter fa-2x" aria-hidden="true"></i>
+                            <span class="sr-only">Twitter</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com/robinkaal/" target="_blank">
+                            <i class="fab fa-instagram fa-2x" aria-hidden="true"></i>
+                            <span class="sr-only">Instagram</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.youtube.com/channel/UCeQJ67pI4WkGi-ZA0eelhfg?view_as=subscriber"
+                            target="_blank">
+                            <i class="fab fa-youtube fa-2x" aria-hidden="true"></i>
+                            <span class="sr-only">Youtube</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 pt-2">
+                <p class="text-center"><a href="{% url 'index' %}"><img src="/static/images/logo.png" class="footer-logo" alt="Logo website and link to homepage"></a> Hosting © 2020 All rights served.</p>
+            </div>
+        </div>
+    </footer>
 
     <!--HERE I IMPORTED BOOTSTRAPS JAVASCRIPT SOURCE: https://getbootstrap.com/docs/4.3/getting-started/download/-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

@@ -11,14 +11,6 @@ body {
     background-color: #DADADA;
 }
 
-footer {
-    margin-top: 40px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-top: 1px solid #ededed;
-    color: #A9A9A9;
-}
-
 /* NAVBAR */
 .navbar {
     padding-top: 0;
@@ -92,11 +84,48 @@ footer {
     height: 30px;
 }
 
+/* FOOTER */
+.footer-settings {
+    background-color: #000000;
+    color: #fafafa;
+
+}
+
+.footer-paragraph {
+    margin-bottom: 0px;
+}
+
+.footer-link {
+    color: #fafafa;
+}
+
+.footer-link:hover {
+    color: #10DE0C;
+    text-decoration: none;
+}
+
+.footer-logo {
+    max-height: 20px;
+    display: inline-block;
+}
+
+.social-media li a i {
+    padding-right: 5px;
+    color: #fafafa;
+    transition: color 0.35s ease-in-out;
+    -moz-transition: color 0.35s ease-in-out;
+    -webkit-transition: color 0.35s ease-in-out;
+    -o-transition: color 0.35s ease-in-out;
+}
+
+.social-media li a i:hover {
+    color: #10DE0C;
+}
+
 /* OTHER STYLING */
 .intro-image {
     width: 100%;
     height: auto;
-    
 }
 
 .intro-image-div {
@@ -104,8 +133,21 @@ footer {
     overflow: hidden;
 }
 
+.home-image {
+    width: 100%;
+    height: auto;
+}
+
+.home-image-div {
+    max-height: 500px;
+    overflow: hidden;
+}
+
+
 .fa-plus {
     color: #10DE0C;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .package-header {
