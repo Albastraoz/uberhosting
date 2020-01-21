@@ -178,10 +178,18 @@ footer {
     padding: 5px;
 }
 
+.package-header-highlight {
+    background-color: #10DE0C;
+}
+
 .package-content {
     color: #000000;
     background-color: #fafafa;
     padding: 5px;
+}
+
+.package-content-highlight {
+    background-color: #E1FFDC;
 }
 
 .package-box {
