@@ -1,6 +1,6 @@
-<div class="row justify-content-center background-grey">
+<div class="row justify-content-lg-center background-grey package-row">
 {% for package in packages %}
-    <div class="col-12 col-md-2 col-md-offset-1 package-box">
+    <div class="package-box">
         <div class="package-header">
             <h3>{{ package.name }}</h3>
         </div>
@@ -12,20 +12,23 @@
                 {% csrf_token %}
                 <button class="btn btn-success" type="submit">Add to cart</button>
             </form>
-            <h4>Domains</h4>
+            <hr>
+            <i class="fas fa-globe fa-2x color-green"></i><h4 class="d-inline-block pl-1">Domains</h4>
             <p>{{ package.domains }} domain<br>
             1 SSL-certificate</p>
-            <h4>Mail</h4>
+            <hr>
+            <i class="fas fa-envelope fa-2x color-green"></i><h4 class="d-inline-block pl-1">Mail</h4>
             <p>{{ package.mail_space }} GB mailspace<br>
             {{ package.mail_address }} Addresses</p>
-            <h4>Hosting</h4>
+            <hr>
+            <i class="fas fa-server fa-2x color-green"></i><h4 class="d-inline-block pl-1">Hosting</h4>
             <p>{{ package.hosting_space }} GB webspace<br>
             {{ package.hosting_databases }} databases<br>
             {% if package.apps == false %}
                 {{ package.apps }}<br>
             {% endif %}
-            {% if package.sftp == 0 %}
-                {{ package.sftp }} SFTP-accounts</p>
+            {% if package.sftp != 0 %}
+                {{ package.sftp }}x SFTP</p>
             {% endif %}
         </div>
     </div>
