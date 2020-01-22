@@ -6,7 +6,7 @@ html {
 body {
     margin: 0 0 389px;
     font-family: Arial;
-    padding-top: 60px;
+    padding-top: 52px;
 }
 
 .row {
@@ -19,6 +19,10 @@ body {
 
 .color-green {
     color: #10DE0C;
+}
+
+.color-white {
+    color: #fafafa;
 }
 
 /* NAVBAR */
@@ -207,25 +211,20 @@ footer {
 }
 
 .badge {
-    padding-left: 9px;
-    padding-right: 9px;
+    font-size: 10px;
+    color: #fafafa;
+    background-color: #10DE0C;
+    padding-left: 7px;
+    padding-right: 7px;
     -webkit-border-radius: 9px;
     -moz-border-radius: 9px;
     border-radius: 9px;
+    margin-left: -15px;
+    margin-bottom: 5px;
 }
 
-.label-warning[href],
-.badge-warning[href] {
-    background-color: #c67605;
-}
-
-.product {
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
+.shopping-icon:hover {
+    text-decoration: none;
 }
 
 @media (min-width: 768px) {
