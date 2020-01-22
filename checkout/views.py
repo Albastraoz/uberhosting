@@ -26,11 +26,11 @@ def checkout(request):
             cart = request.session.get('cart', {})
             total = 0
             for id, quantity in cart.items():
-                product = get_object_or_404(Package, pk=id)
-                total += quantity * product.price
+                package = get_object_or_404(Package, pk=id)
+                total += quantity * package.price
                 order_line_item = OrderLineItem(
                     order = order, 
-                    product = product,
+                    package = package, 
                     quantity = quantity
                     )
                 order_line_item.save()
@@ -48,7 +48,7 @@ def checkout(request):
             if customer.paid:
                 messages.error(request, "You have successfully paid")
                 request.session['cart'] = {}
-                return redirect(reverse('packages'))
+                return redirect(reverse('profile'))
             else:
                 messages.error(request, "Unable to take payment")
         else:
@@ -57,4 +57,5 @@ def checkout(request):
     else:
         payment_form = MakePaymentForm()
         order_form = OrderForm()
+        
     return render(request, "checkout.html", {'order_form': order_form, 'payment_form': payment_form, 'publishable': settings.STRIPE_PUBLISHABLE})

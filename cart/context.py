@@ -8,11 +8,11 @@ def cart_contents(request):
 
     cart_items = []
     total = 0
-    product_count = 0
+    package_count = 0
     for id, quantity in cart.items():
-        product = get_object_or_404(Package, pk=id)
-        total += quantity * product.price
-        product_count += quantity
-        cart_items.append({'id':id, 'quantity': quantity, 'product': product})
+        package = get_object_or_404(Package, pk=id)
+        total += quantity * package.price
+        package_count += quantity
+        cart_items.append({'id':id, 'quantity': quantity, 'package': package})
 
-    return { 'cart_items': cart_items, 'total': total, 'product_count': product_count }
+    return { 'cart_items': cart_items, 'total': total, 'package_count': package_count }

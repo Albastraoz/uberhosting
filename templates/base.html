@@ -16,9 +16,6 @@
     <!--HERE I IMPORT MY OWN STYLESHEET TO OVERLAP BOOTSTRAPS STYLES AND CREATE MY OWN-->
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 
-    {% block head_js %}
-    {% endblock head_js %}
-
 </head>
 <body>
     
@@ -31,8 +28,8 @@
             <span class="float-right">
                 <a href="{% url 'view_cart' %}" class="shopping-icon pr-2">
                     <i class="fa fa-shopping-cart fa-lg color-white"></i>
-                    {% if product_count > 0 %}
-                    <label class="badge">{{ product_count }}</label>
+                    {% if package_count > 0 %}
+                    <label class="badge">{{ package_count }}</label>
                     {% endif %}
                 </a>
                 |
@@ -49,8 +46,8 @@
             <span class="float-right color-white">
                 <a href="{% url 'view_cart' %}" class="shopping-icon d-md-none pr-2">
                     <i class="fa fa-shopping-cart color-white"></i>
-                    {% if product_count > 0 %}
-                    <label class="badge">{{ product_count }}</label>
+                    {% if package_count > 0 %}
+                    <label class="badge">{{ package_count }}</label>
                     {% endif %}
                 </a>|
                 <button class="navbar-toggler ml-auto custom-toggler" type="button" data-toggle="collapse"
@@ -146,8 +143,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-
+    
     <!--HERE I IMPORT FONT AWESOME TO USE FOR ICONS SOURCE: https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use-->
     <script src="https://kit.fontawesome.com/5d737143b8.js" crossorigin="anonymous"></script>
+
+    {% block head_js %}
+    {% endblock head_js %}
+    
 </body>
 </html>

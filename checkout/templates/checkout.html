@@ -2,16 +2,6 @@
 {% load static from staticfiles %}
 {% load bootstrap_tags %}
 
-{% block head_js %}
-<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-<script type="text/javascript">
-    //<![CDATA[
-    Stripe.publishableKey = '{{ publishable }}';
-    //]]>
-</script>
-<script type="text/javascript" src="{% static 'js/stripe.js' %}"></script>
-{% endblock %}
-
 {% block content %}
 <div class="row justify-content-md-center">
     <div class="col-12 col-md-8">
@@ -23,8 +13,8 @@
                 {% else %}
                 <hr>
                 {% endif %}
-                <h3>{{ item.quantity }}x {{ item.product.name }} package</h3>
-                <p>Price: €{{ item.product.price }}</p>
+                <h3>{{ item.quantity }}x {{ item.package.name }} package</h3>
+                <p>Price: €{{ item.package.price }}</p>
                 {% endfor %}
             </div>
         </div>
@@ -62,4 +52,14 @@
         </form>
     </div>
 </div>
+{% endblock %}
+
+{% block head_js %}
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script type="text/javascript">
+    //<![CDATA[
+    Stripe.publishableKey = '{{ publishable }}';
+    //]]>
+</script>
+<script type="text/javascript" src="{% static 'js/stripe.js' %}"></script>
 {% endblock %}

@@ -6,7 +6,7 @@ def view_cart(request):
     return render(request, "cart.html")
 
 def add_to_cart(request, id):
-    # Add product to cart session.
+    # Add package to cart session.
     quantity = 1
     
     cart = request.session.get('cart', {})
@@ -16,7 +16,7 @@ def add_to_cart(request, id):
     return redirect(reverse('view_cart'))
 
 def adjust_cart(request, id):
-    # Adjust the products in the cart session.
+    # Adjust the packages in the cart session.
     quantity = 0
     cart = request.session.get('cart', {})
 
