@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, HttpResponseRedirect
 from django.contrib import messages, auth
 from django.core.urlresolvers import reverse
-from .forms import UserLoginForm, UserRegistrationForm
+from .forms import UserLoginForm, UserRegistrationForm, UserForm, ProfileForm
 from django.template.context_processors import csrf
 from django.contrib.auth.decorators import login_required
 
@@ -35,7 +35,7 @@ def login(request):
                     next = request.GET['next']
                     return HttpResponseRedirect(next)
                 else:
-                    return redirect(reverse('index'))
+                    return redirect(reverse('profile'))
             else:
                 user_form.add_error(None, "Your username or password are incorrect")
     else:
@@ -44,11 +44,25 @@ def login(request):
     args = {'user_form': user_form, 'next': request.GET.get('next', '')}
     return render(request, 'login.html', args)
 
-
 @login_required
 def profile(request):
-    """A view that displays the profile page of a logged in user"""
-    return render(request, 'profile.html')
+    if request.method == 'POST':
+        user_form = UserForm(request.POST, instance=request.user)
+        profile_form = ProfileForm(request.POST, instance=request.user.profile)
+        if user_form.is_valid() and profile_form.is_valid():
+            user_form.save()
+            profile_form.save()
+            messages.success(request, ('Your profile was successfully updated!'))
+            return redirect(reverse('profile'))
+        else:
+            messages.error(request, ('Please correct the error below.'))
+    else:
+        user_form = UserForm(instance=request.user)
+        profile_form = ProfileForm(instance=request.user.profile)
+    return render(request, 'profile.html', {
+        'user_form': user_form,
+        'profile_form': profile_form
+    })
 
 
 def register(request):
