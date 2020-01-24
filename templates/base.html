@@ -147,6 +147,17 @@
     <!--HERE I IMPORT FONT AWESOME TO USE FOR ICONS SOURCE: https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use-->
     <script src="https://kit.fontawesome.com/5d737143b8.js" crossorigin="anonymous"></script>
 
+    <script type="text/javascript">
+        $('#id_email').prop('readonly', true);
+
+        $('#id_first_name').prop('required', true);
+        $('#id_last_name').prop('required', true);
+        $('#id_phone_number').prop('required', true);
+        $('#id_street_address1').prop('required', true);
+        $('#id_town_or_city').prop('required', true);
+        $('#id_country').prop('required', true);
+    </script>
+
     {% block head_js %}
     {% endblock head_js %}
     

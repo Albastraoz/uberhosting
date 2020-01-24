@@ -48,9 +48,10 @@
 
             <div class="form-group col-md-6 d-inline-block">
                 {{ order_form|as_bootstrap }}
+                {{ second_order_form|as_bootstrap }}
             </div>
 
-            <div class="form-group col-md-6 d-inline-block position-absolute">
+            <div class="form-group col-md-6 d-inline-block float-right">
                 {{ payment_form|as_bootstrap }}
                 {% csrf_token %}
                 <input class="btn btn-primary" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
