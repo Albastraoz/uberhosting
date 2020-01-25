@@ -22,3 +22,9 @@
 </div>
 
 {% endblock %}
+
+{% block profile_js %}
+<script type="text/javascript">
+    $('#id_email').prop('readonly', true);
+</script>
+{% endblock profile_js %}
