@@ -19,6 +19,7 @@ from accounts import urls as urls_accounts
 from packages import urls as urls_packages
 from cart import urls as urls_cart
 from checkout import urls as urls_checkout
+from blog import urls as urls_blog
 from contact import urls as urls_contact
 from uber.views import index
 
@@ -29,5 +30,6 @@ urlpatterns = [
     url(r'^packages/', include(urls_packages)),
     url(r'^cart/', include(urls_cart)),
     url(r'^checkout/', include(urls_checkout)),
+    url(r'^posts/', include(urls_checkout)),
     url(r'^contact/', include(urls_contact)),
 ]
