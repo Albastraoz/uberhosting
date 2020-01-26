@@ -4,8 +4,8 @@
 
 <div class="row justify-content-md-center">
     <div class="col-12 col-md-8">
-        <h2>Blogposts</h2>
-        <a href="{% url 'new_post' %}" class="btn btn-primary">New Post</a>
+        <h2 class="d-inline-block">Blogposts</h2>
+        <a href="{% url 'new_post' %}" class="btn btn-primary float-right">New Post</a><br>
     </div>
     <div class="col-12 col-md-8">
         {% for post in posts %}
@@ -14,9 +14,10 @@
                 <h5 class="card-title">{{ post.title }}</h5>
                 <h6 class="card-subtitle mb-2 text-muted">Robin - {{ post.created_date }} - <i class="far fa-eye"></i> {{ post.views }}</h6>
                 <p class="card-text">{{ post.content|truncatewords:50 }}</p>
-                <a href="{% url 'post_detail' post.id %}" class="card-link">View post</a>
+                <a href="{% url 'post_detail' post.id %}" class="btn btn-primary">View post</a>
             </div>
         </div>
+        <br>
         {% endfor %}
     </div>
 </div>
