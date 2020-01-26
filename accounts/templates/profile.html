@@ -1,22 +1,28 @@
 {% extends "base.html" %}
-{% load bootstrap_tags %}
+{% load crispy_forms_tags %}
 
 {% block content %}
+
+<hr class="page-divider">
 <div class="row justify-content-md-center">
     <div class="col-12 col-md-8">
         <h2>Welcome {{ user.first_name }}</h2>
         <form method="post">
             {% csrf_token %}
             <div class="form-group col-md-6 d-inline-block">
-                {{ user_form|as_bootstrap }}
+                {{ user_form|crispy }}
+                {{ profile_form.phone_number|as_crispy_field }}
+                {{ profile_form.street_address1|as_crispy_field }}
+                {{ profile_form.street_address2|as_crispy_field }}
             </div>
             
             <div class="form-group col-md-6 d-inline-block float-right pb-2">
-                {{ profile_form|as_bootstrap }}
-                <button class="btn btn-primary" type="submit">Save changes</buttonclass="btn btn-primary">
+                {{ profile_form.postcode|as_crispy_field }}
+                {{ profile_form.town_or_city|as_crispy_field }}
+                {{ profile_form.county|as_crispy_field }}
+                {{ profile_form.country|as_crispy_field }}
+                <button class="btn btn-primary" type="submit">Save changes</button>
             </div>
-            
-            
         </form>
     </div>
 </div>
