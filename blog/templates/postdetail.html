@@ -11,10 +11,12 @@
             <div class="card-body">
                 <blockquote class="blockquote mb-0">
                     <p>{{ post.content }}</p>
-                    <div class="blockquote-footer">Author: <cite title="Source Title">Robin</cite> - {{ post.created_date }} <i class="far fa-eye"></i>{{ post.views }}
+                    <div class="blockquote-footer">Author: <cite title="Source Title">{{ post.author }}</cite> - {{ post.created_date }} <i class="far fa-eye"></i>{{ post.views }}
                         <div class="float-right">
                             <a href="{% url 'get_posts' %}" class="btn btn-secondary mr-2">Back</a>
+                            {% if user.is_authenticated and user.is_superuser %}
                             <a href="{% url 'edit_post' post.id %}" class="btn btn-primary">Edit</a>
+                            {% endif %}
                         </div>
                     </div>
                 </blockquote>
