@@ -7,7 +7,7 @@ from .forms import BlogPostForm
 def get_posts(request):
     # This will return all posts from the database.
 
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+    posts = Post.objects.filter(created_date__lte=timezone.now()).order_by('-created_date')
     return render(request, "blogpost.html", {'posts': posts})
 
 def post_detail(request, pk):
@@ -19,7 +19,7 @@ def post_detail(request, pk):
     return render(request, "postdetail.html", {'post': post})
 
 def create_or_edit_post(request, pk=None):
-    # Create a post or edit a existing post.
+    # Create a post or edit an existing post.
 
     post = get_object_or_404(Post, pk=pk) if pk else None
     if request.method == "POST":

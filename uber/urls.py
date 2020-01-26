@@ -30,6 +30,6 @@ urlpatterns = [
     url(r'^packages/', include(urls_packages)),
     url(r'^cart/', include(urls_cart)),
     url(r'^checkout/', include(urls_checkout)),
-    url(r'^posts/', include(urls_checkout)),
+    url(r'^posts/', include(urls_blog)),
     url(r'^contact/', include(urls_contact)),
 ]
