@@ -26,11 +26,32 @@
                             <a href="{% url 'get_posts' %}" class="btn btn-secondary mr-2">Back</a>
                             {% if user.is_authenticated and user.is_superuser %}
                             <a href="{% url 'edit_post' post.id %}" class="btn btn-primary">Edit</a>
-                            <a href="{% url 'delete_post' post.id %}" class="btn btn-danger">Delete</a>
+                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteConfirmation">Delete</button>
                             {% endif %}
                         </div>
                     </div>
                 </blockquote>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Delete model for defensive design-->
+<div class="modal fade" id="deleteConfirmation" tabindex="-1" role="dialog" aria-labelledby="deleteConfirmationLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteConfirmationLabel">Delete {{ post.title }}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete {{ post.title }} permenantly?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <a href="{% url 'delete_post' post.id %}" class="btn btn-danger">Delete</a>
             </div>
         </div>
     </div>

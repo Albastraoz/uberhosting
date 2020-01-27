@@ -202,7 +202,7 @@ Fonts are imported from Google fonts:
 
 ### Media
 The images for the website are copyright free and taken from:
-- [Wikipedia](hhttps://www.wikipedia.org/)
+- [Wikipedia](https://www.wikipedia.org/)
 - [Pexels](https://www.pexels.com/)
 - [Needpix](https://www.needpix.com/)
 - [Flickr](https://www.flickr.com/)
