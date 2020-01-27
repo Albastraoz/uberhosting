@@ -153,6 +153,10 @@ footer {
 }
 
 /* OTHER STYLING */
+.price-package {
+    font-size: 36px;
+}
+
 .intro-image {
     position: relative;
     width: 100%;
@@ -190,7 +194,7 @@ footer {
     color: #fafafa;
     background-color: #000000;
     text-align: center;
-    padding: 5px;
+    padding: 10px 30px;
 }
 
 .package-header-highlight {
@@ -200,7 +204,7 @@ footer {
 .package-content {
     color: #000000;
     background-color: #fafafa;
-    padding: 5px;
+    padding: 5px 30px;
 }
 
 .package-content-highlight {

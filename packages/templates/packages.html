@@ -1,4 +1,4 @@
-<div class="row justify-content-lg-center background-grey package-row">
+<div class="row justify-content-lg-center background-grey package-row pb-4">
 {% for package in packages %}
     <div class="package-box">
         {% if package.highlight %}
@@ -14,7 +14,7 @@
         <div class="package-content">
         {% endif %}
             <div class="text-center">
-                <p class="d-inline-block">€ </p><h4 class="d-inline-block">{{ package.price }}</h4><p class="d-inline-block"> /mo</p>
+                <p class="d-inline-block mb-0"><span class="price-package">€ {{ package.price }}</span> /mo</p>
             </div>          
             <form method="post" action="{% url 'add_to_cart' package.id %}" class="text-center">
                 {% csrf_token %}
@@ -32,8 +32,8 @@
             <i class="fas fa-server fa-2x color-green"></i><h4 class="d-inline-block pl-1">Hosting</h4>
             <p>{{ package.hosting_space }} GB webspace<br>
             {{ package.hosting_databases }} databases<br>
-            {% if package.apps == false %}
-                {{ package.apps }}<br>
+            {% if package.apps == True %}
+                Apps: python, ruby<br>
             {% endif %}
             {% if package.sftp != 0 %}
                 {{ package.sftp }}x SFTP</p>
