@@ -3,7 +3,7 @@ from django.core.mail import send_mail
 from django.contrib import messages
 from .forms import ContactForm
 
-# Create your views here.
+# Send email to owner email address when contact form is send
 def contact(request):
     if request.method=="POST":
         contact_form = ContactForm(request.POST)

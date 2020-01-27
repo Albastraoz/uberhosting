@@ -10,10 +10,10 @@ from django.contrib.auth.models import User
 from accounts.models import Profile
 import stripe
 
-# Create your views here.
-
+# Stripe api key
 stripe.api_key = settings.STRIPE_SECRET
 
+# Checkout view
 @login_required()
 def checkout(request):
     if request.method=="POST":

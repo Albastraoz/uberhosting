@@ -1,7 +1,7 @@
 from django.db import models
 from django.utils import timezone
 
-# Create your models here.
+# News item model
 class Post(models.Model):
     author = models.CharField(max_length=200, blank=False)
     title = models.CharField(max_length=200, blank=False)

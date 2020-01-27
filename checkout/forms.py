@@ -1,8 +1,8 @@
 from django import forms
 from .models import Order
 
+# Payment form for checkout view
 class MakePaymentForm(forms.Form):
-
     MONTH_CHOICES = [(i, i) for i in range(1, 12)]
     YEAR_CHOICES = [(i, i) for i in range(2020, 2036)]
 
@@ -12,11 +12,13 @@ class MakePaymentForm(forms.Form):
     expiry_year = forms.ChoiceField(label='Year', choices=YEAR_CHOICES, required=False)
     stripe_id = forms.CharField(widget=forms.HiddenInput)
 
+# First order form for User data
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
         fields = ('first_name', 'last_name')
 
+# Second order from for UserProfile data
 class SecondOrderForm(forms.ModelForm):
     class Meta:
         model = Order

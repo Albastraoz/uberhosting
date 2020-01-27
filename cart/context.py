@@ -3,7 +3,6 @@ from packages.models import Package
 
 def cart_contents(request):
     # Makes contents of cart available.
-
     cart = request.session.get('cart', {})
 
     cart_items = []

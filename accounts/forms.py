@@ -4,12 +4,12 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.core.exceptions import ValidationError
 
-
+# Login form
 class UserLoginForm(forms.Form):
     username_or_email = forms.CharField()
     password = forms.CharField(widget=forms.PasswordInput)
 
-
+# Registration form
 class UserRegistrationForm(UserCreationForm):
     password1 = forms.CharField(label='Password', widget=forms.PasswordInput)
     password2 = forms.CharField(
@@ -40,12 +40,13 @@ class UserRegistrationForm(UserCreationForm):
 
         return password2
 
-
+# User model form for profile page
 class UserForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ('first_name', 'last_name', 'email')
 
+# Profile model form for profile page
 class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile

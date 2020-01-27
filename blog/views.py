@@ -9,13 +9,11 @@ from .forms import BlogPostForm
 # Create your views here.
 def get_posts(request):
     # This will return all posts from the database.
-
     posts = Post.objects.filter(created_date__lte=timezone.now()).order_by('-created_date')
     return render(request, "blogpost.html", {'posts': posts})
 
 def post_detail(request, pk):
     # Returns a single post base on the post ID(pk)
-
     post = get_object_or_404(Post, pk=pk)
     post.views += 1
     post.save()

@@ -1,7 +1,7 @@
 from django.db import models
 from packages.models import Package
 
-# Create your models here.
+# Order model to send to admin panel if order is successfull
 class Order(models.Model):
     first_name = models.CharField(max_length=50, blank=False)
     last_name = models.CharField(max_length=50, blank=False)
@@ -17,6 +17,7 @@ class Order(models.Model):
     def __str__(self):
         return "{0}-{1}-{2}".format(self.id, self.date, self.first_name, self.last_name)
 
+# Admin model for orders
 class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, null=False)
     package = models.ForeignKey(Package, null=False)
