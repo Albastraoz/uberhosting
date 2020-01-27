@@ -38,3 +38,15 @@ def create_or_edit_post(request, pk=None):
         return render(request, 'blogpostform.html', {'form': form})
     else:
         return redirect(get_posts)
+
+@login_required()
+def delete_post(request, pk):
+    # Delete an existingg post
+    if request.user.is_superuser:
+        post = get_object_or_404(Post, pk=pk)
+        post.delete()
+
+        return redirect(get_posts)
+
+    else:
+        return redirect(get_posts)
