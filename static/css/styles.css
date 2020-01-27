@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC|Roboto&display=swap');
+
 html {
     position: relative;
     min-height: 100%;
@@ -5,8 +7,12 @@ html {
 
 body {
     margin: 0 0 389px;
-    font-family: Arial;
+    font-family: 'Roboto', sans-serif;
     padding-top: 52px;
+}
+
+h1, h2 {
+    font-family: 'Bowlby One SC', cursive;
 }
 
 .row {
@@ -148,6 +154,7 @@ footer {
 
 /* OTHER STYLING */
 .intro-image {
+    position: relative;
     width: 100%;
     height: auto;
 }
@@ -163,7 +170,6 @@ footer {
 }
 
 .home-image-div {
-    max-height: 500px;
     overflow: hidden;
 }
 
