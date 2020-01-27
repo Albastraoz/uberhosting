@@ -3,12 +3,13 @@
 
 {% block content %}
 
-<hr class="page-divider">
-<div class="row justify-content-md-center">
+<div class="row justify-content-md-center pt-3">
     <div class="col-12 col-md-8">
         <h2 class="d-inline-block">News</h2>
-        <div class="col-12 page-image-div pb-2">
-            <img src="{% static 'images/newspaper.jpg' %}" class="page-images" alt="newspapers">
+        <div class="row d-none d-lg-block">
+            <div class="col-12 page-image-div pb-2">
+                <img src="{% static 'images/newspaper.jpg' %}" class="page-images" alt="newspapers">
+            </div>
         </div>
         {% if user.is_authenticated and user.is_superuser %}
         <a href="{% url 'new_post' %}" class="btn btn-primary float-right">New Post</a><br>
