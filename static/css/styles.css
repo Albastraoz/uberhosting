@@ -217,6 +217,15 @@ footer {
     
 }
 
+.page-image-div {
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.page-images {
+    width: 100%;
+}
+
 .icon-bar {
     background-color: #fff;
 }

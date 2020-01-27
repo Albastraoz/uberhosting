@@ -6,6 +6,13 @@
 <div class="row justify-content-md-center">
     <div class="col-12 col-md-8">
         <h1>Login</h1>
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-success" role="alert">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
         <form method="post" action="{% url 'login' %}?next={{ next }}" class="accountform">
             <fieldset class="form-group">
                 {% csrf_token %}

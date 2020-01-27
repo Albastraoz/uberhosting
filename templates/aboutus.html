@@ -1,10 +1,43 @@
 {% extends "base.html" %}
+{% load static from staticfiles %}
+
 {% block content %}
 
 <hr class="page-divider">
 <div class="row justify-content-md-center">
-    <div class="col-12 col-md-8">
+    <div class="col-12 col-md-8 pb-5">
         <h1>About us</h1>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <h3>The beginning</h3>
+                <p>Uber hosting began in 2012 as a small company which set up websites for customers in Ireland with the focus on small businesses.
+                    Later we in 2014 we started delivering our services in the UK and France. In 2016 we began with hosting servers for clients
+                    all over europe and today our services are available all over the world.
+                </p>
+            </div>
+            <div class="col-12 col-md-6">
+                <h3>Our aim</h3>
+                <p>The main focus is to deliver a service with a very high security and easy to use user interaction. Over the years we created
+                    a solid CMS system for our users where they can easy host websites, manage email addresses and create beautifull apps.
+                </p>
+            </div>
+            <div class="col-12 page-image-div pb-2">
+                <img src="{% static 'images/aboutus.jpg' %}" class="page-images" alt="About us image">
+            </div>
+            <div class="col-12 col-md-6">
+                <h3>Customer support</h3>
+                <p>Where you have problems deploying your websites or apps we come with solutions! Our support team with years of experience
+                    in software development are available to you every day and will help you all the way. Send us an email through our contact
+                    form and a developer will contact you as soon as possible.
+                </p>
+            </div>
+            <div class="col-12 col-md-6">
+                <h3>Future</h3>
+                <p>Our future plans are to increase support for the asian market with support in multiple languages like chinese and japanese. 
+                    We already have offices in America and Europe and will soon continue with new offices in Africa and Australia.
+                </p>
+            </div>
+        </div>
     </div>
 </div>
 
