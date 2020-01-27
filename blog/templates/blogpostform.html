@@ -5,9 +5,9 @@
 
 <hr class="page-divider">
 <div class="row justify-content-md-center">
-    <div class="col-12 col-md-8">
+    <div class="col-12 col-md-8 pb-4">
         <h1>Create/Edit Post</h1>
-        <form method="POST">
+        <form method="POST" class="pb-4">
             {% csrf_token %}
             {{ form|as_bootstrap }}
             <a href="{% url 'get_posts' %}" class="btn btn-secondary">Cancel</a>

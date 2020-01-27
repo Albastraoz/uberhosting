@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.contrib import messages
 from django.utils import timezone
 from .models import Post
 from .forms import BlogPostForm
@@ -29,6 +30,8 @@ def create_or_edit_post(request, pk=None):
             form = BlogPostForm(request.POST, instance=post)
             if form.is_valid():
                 post = form.save()
+                messages.success(request, "Edit/create was successfull!")
+                
                 return redirect(post_detail, post.pk)
         else:
             form = BlogPostForm(instance=post)
