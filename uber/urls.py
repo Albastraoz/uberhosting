@@ -21,11 +21,12 @@ from cart import urls as urls_cart
 from checkout import urls as urls_checkout
 from blog import urls as urls_blog
 from contact import urls as urls_contact
-from uber.views import index
+from uber.views import index, aboutus
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index, name='index'),
+    url(r'^aboutus/', aboutus, name='aboutus'),
     url(r'^accounts/', include(urls_accounts)),
     url(r'^packages/', include(urls_packages)),
     url(r'^cart/', include(urls_cart)),

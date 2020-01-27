@@ -1,0 +1,1 @@
+$('#id_email').prop('readonly', true);

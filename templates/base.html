@@ -44,7 +44,7 @@
         <nav class="container-fluid fixed-top second-nav navbar navbar-expand-lg pr-0">
             <span class="nav-link nav-link-dark hover-white d-lg-none">HOSTING</span>
             <span class="float-right color-white">
-                <a href="{% url 'view_cart' %}" class="shopping-icon d-md-none pr-2">
+                <a href="{% url 'view_cart' %}" class="shopping-icon d-lg-none pr-2">
                     <i class="fa fa-shopping-cart color-white"></i>
                     {% if package_count > 0 %}
                     <label class="badge">{{ package_count }}</label>
@@ -64,8 +64,8 @@
                     <li class="nav-item mr-3 d-lg-none"><a href="{% url 'register' %}" class="nav-link nav-link-light">Signup</a></li>
                     {% endif %}
                     <li class="nav-item mr-3"><a href="{% url 'packages' %}" class="nav-link  nav-link-light">Packages</a></li>
-                    <li class="nav-item mr-3"><a href="/" class="nav-link  nav-link-light">About us</a></li>
-                    <li class="nav-item mr-3"><a href="{% url 'get_posts' %}" class="nav-link  nav-link-light">Blogs</a></li>
+                    <li class="nav-item mr-3"><a href="{% url 'aboutus' %}" class="nav-link  nav-link-light">About us</a></li>
+                    <li class="nav-item mr-3"><a href="{% url 'get_posts' %}" class="nav-link  nav-link-light">News</a></li>
                     <li class="nav-item mr-3"><a href="{% url 'contact' %}" class="nav-link  nav-link-light">Contact</a></li>
                 </ul>
             </div>
@@ -79,17 +79,18 @@
     <footer class="container-fluid pr-0 pl-0">
         <div class="row footer-settings justify-content-md-center pt-5 pb-2">
             <!--NAVIGATIONAL SITEMAP-->
-            <div class="col-12 col-md-2 d-none d-lg-block pb-3">
+            <div class="col-12 col-md-2 col-lg-2 d-none d-lg-block pb-3">
                 <h3>SITEMAP</h3>
                 <ul>
                     <li><a href="{% url 'index' %}" class="footer-link">Home</a></li>
                     <li><a href="{% url 'packages' %}" class="footer-link">Packages</a></li>
-                    <li><a href="/" class="footer-link">About us</a></li>
-                    <li><a href="/" class="footer-link">Contact</a></li>
+                    <li><a href="{% url 'aboutus' %}" class="footer-link">About us</a></li>
+                    <li><a href="{% url 'get_posts' %}" class="footer-link">News</a></li>
+                    <li><a href="{% url 'contact' %}" class="footer-link">Contact</a></li>
                 </ul>
             </div>
             <!--CONTACT INFORMATION-->
-            <div class="col-12 col-md-6 col-lg-4 pb-3">
+            <div class="col-12 col-md-4 col-lg-3 pb-3 pl-5 pl-md-3">
                 <h3>CONTACT</h3>
                 <p class="footer-paragraph">EMAIL: info@uberhosting.com</p>
                 <p class="footer-paragraph">PHONE: 0123456789</p>
@@ -98,7 +99,7 @@
                 <p class="footer-paragraph">20412 Greenwall, England</p>
             </div>
             <!--LINKS TO ALL SOCIAL MEDIA PAGES-->
-            <div class="col-12 col-md-4 col-lg-3 pb-3 footer-section">
+            <div class="col-12 col-md-4 col-lg-3 pb-3 pl-5 pl-md-3 footer-section">
                 <h3>FOLLOW US</h3>
                 <ul class="list-inline social-media">
                     <li class="list-inline-item">
@@ -147,12 +148,9 @@
     
     <!--HERE I IMPORT FONT AWESOME TO USE FOR ICONS SOURCE: https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use-->
     <script src="https://kit.fontawesome.com/5d737143b8.js" crossorigin="anonymous"></script>
-
-    {% block profile_js %}
-    {% endblock profile_js %}
     
-    {% block head_js %}
-    {% endblock head_js %}
+    {% block custom_js %}
+    {% endblock custom_js %}
     
 </body>
 </html>

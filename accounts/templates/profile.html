@@ -1,5 +1,10 @@
 {% extends "base.html" %}
+{% load static from staticfiles %}
 {% load crispy_forms_tags %}
+
+{% block custom_js %}
+<script type="text/javascript" src="{% static 'js/profile.js' %}"></script>
+{% endblock custom_js %}
 
 {% block content %}
 
@@ -28,9 +33,3 @@
 </div>
 
 {% endblock %}
-
-{% block profile_js %}
-<script type="text/javascript">
-    $('#id_email').prop('readonly', true);
-</script>
-{% endblock profile_js %}
