@@ -2,6 +2,7 @@
 {% load static from staticfiles %}
 {% load bootstrap_tags %}
 
+<!--Custom javascript for stripe-->
 {% block custom_js %}
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 <script type="text/javascript">
@@ -16,7 +17,10 @@
 
 <div class="row justify-content-md-center pt-3">
     <div class="col-12 col-md-8 pb-5">
+        <!--Title-->
         <h2>Cart summary</h2>
+
+        <!--Cart content-->
         <div class="card">
             <div class="card-body">
                 {% for item in cart_items %}
@@ -33,12 +37,14 @@
     </div>
 </div>
 
+<!--Total price cart content-->
 <div class="row justify-content-md-center">
     <div class="col-12 col-md-8">
     <p>Total <strong>€{{ total }}</strong></p>
     </div>
 </div>
 
+<!--Payment form-->
 <div class="row justify-content-md-center">
     <div class="col-12 col-md-8">
         <form role="form" method="POST" id="payment-form" action="{% url 'checkout' %}">

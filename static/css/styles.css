@@ -1,5 +1,7 @@
+/* HERE I IMPORT THE FONTS USED ON THE WEBSITE FROM GOOGLE FONTS SOURCE: https://fonts.google.com/ */
 @import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC|Roboto&display=swap');
 
+/*----- GENERAL STYLING -----*/
 html {
     position: relative;
     min-height: 100%;
@@ -19,8 +21,14 @@ h1 {
     margin: 0;
 }
 
+/*----- COLORS -----*/
 .background-grey {
     background-color: #DADADA;
+}
+
+.background-white {
+    background-color: #ffffff;
+    height: 30px;
 }
 
 .color-green {
@@ -31,13 +39,7 @@ h1 {
     color: #fafafa;
 }
 
-.page-divider {
-    border: 2px solid #10DE0C;
-    top: 120px;
-    margin-top: 0;
-}
-
-/* NAVBAR */
+/*----- NAVBAR -----*/
 .navbar {
     padding-top: 0;
     padding-bottom: 0;
@@ -105,12 +107,24 @@ h1 {
     z-index: 1040;
 }
 
-.background-white {
-    background-color: #ffffff;
-    height: 30px;
+/* Shopping cart icon */
+.badge {
+    font-size: 10px;
+    color: #fafafa;
+    background-color: #10DE0C;
+    padding-left: 7px;
+    padding-right: 7px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+    margin-left: -15px;
+    margin-bottom: 5px;
+}
+.shopping-icon:hover {
+    text-decoration: none;
 }
 
-/* FOOTER */
+/*----- FOOTER -----*/
 footer {
     position: absolute;
     bottom: 0;
@@ -153,37 +167,7 @@ footer {
     color: #10DE0C;
 }
 
-/* OTHER STYLING */
-.price-package {
-    font-size: 36px;
-}
-
-.intro-image {
-    position: relative;
-    width: 100%;
-    height: auto;
-}
-
-.intro-image-div {
-    max-height: 800px;
-    overflow: hidden;
-}
-
-.home-image {
-    width: 100%;
-    height: auto;
-}
-
-.home-image-div {
-    overflow: hidden;
-}
-
-
-.fa-plus {
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
+/*----- PACKAGE STYLING -----*/
 .package-row {
     overflow-x: auto;
     flex-wrap: nowrap;
@@ -215,7 +199,38 @@ footer {
 .package-box {
     min-width: 240px;
     padding: 20px;
-    
+}
+
+.price-package {
+    font-size: 36px;
+}
+
+/*----- HOMEPAGE STYLING -----*/
+.intro-image {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.intro-image-div {
+    max-height: 800px;
+    overflow: hidden;
+}
+
+.home-image {
+    width: 100%;
+    height: auto;
+}
+
+.home-image-div {
+    overflow: hidden;
+}
+
+/*----- PAGE STYLING -----*/
+.page-divider {
+    border: 2px solid #10DE0C;
+    top: 120px;
+    margin-top: 0;
 }
 
 .page-image-div {
@@ -227,6 +242,12 @@ footer {
     width: 100%;
 }
 
+/*----- OTHER STYLING -----*/
+.fa-plus {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 .icon-bar {
     background-color: #fff;
 }
@@ -235,23 +256,7 @@ footer {
     padding: 20px 20px;
 }
 
-.badge {
-    font-size: 10px;
-    color: #fafafa;
-    background-color: #10DE0C;
-    padding-left: 7px;
-    padding-right: 7px;
-    -webkit-border-radius: 9px;
-    -moz-border-radius: 9px;
-    border-radius: 9px;
-    margin-left: -15px;
-    margin-bottom: 5px;
-}
-
-.shopping-icon:hover {
-    text-decoration: none;
-}
-
+/*----- RESPONSIVE STYLING -----*/
 @media (min-width: 768px) {
     body {
         margin: 0 0 271px;
@@ -262,6 +267,8 @@ footer {
     body {
         padding-top: 120px;
     }
+
+    /* Navbar */
     .nav-link-light {
         color: #000000;
     }

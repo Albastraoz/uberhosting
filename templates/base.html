@@ -21,6 +21,7 @@
     
     <!--HEADER-->
     <header>
+        <!--LARGE SCREEN NAV-->
         <a href="{% url 'index' %}"><img src="{% static 'images/logo.png' %}" class="header-logo" alt="Logo website and link to homepage"></a>
         <div class="container-fluid fixed-top background-white d-none d-lg-block"></div>
         <div class="container-fluid fixed-top first-nav d-none d-lg-block">
@@ -41,6 +42,8 @@
             </span>
             {% endif %}
         </div>
+
+        <!--SMALL SCREEN NAV-->
         <nav class="container-fluid fixed-top second-nav navbar navbar-expand-lg pr-0">
             <span class="nav-link nav-link-dark hover-white d-lg-none">HOSTING</span>
             <span class="float-right color-white">
@@ -54,6 +57,8 @@
                     data-target="#navbarMobileDropdown" aria-controls="navbarMobileDropdown" aria-expanded="false"
                     aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span class="navbar-toggler-icon"></button>
             </span>
+
+            <!--LINKS FOR ALL SCREEN SIZES-->
             <div class="collapse navbar-collapse" id="navbarMobileDropdown">
                 <ul class="navbar-nav float-right text-right">
                     {% if user.is_authenticated %}
@@ -72,6 +77,7 @@
         </nav>
     </header>
     <hr class="page-divider fixed-top d-none d-lg-block">
+
     {% block content %}
     {% endblock %}
 

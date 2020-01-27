@@ -5,7 +5,10 @@
 
 <div class="row justify-content-md-center pt-3">
     <div class="col-12 col-md-8 pb-4">
+        <!--Title-->
         <h1>Create/Edit Post</h1>
+
+        <!--Create/edit post form-->
         <form method="POST" class="pb-4">
             {% csrf_token %}
             {{ form|as_bootstrap }}

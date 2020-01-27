@@ -2,6 +2,7 @@
 {% load static from staticfiles %}
 {% load crispy_forms_tags %}
 
+<!--Custom javascript to make email input readonly-->
 {% block custom_js %}
 <script type="text/javascript" src="{% static 'js/profile.js' %}"></script>
 {% endblock custom_js %}
@@ -10,7 +11,10 @@
 
 <div class="row justify-content-md-center pt-3 pb-4">
     <div class="col-12 col-md-8">
+        <!--Title-->
         <h2>Welcome {{ user.first_name }}</h2>
+
+        <!--Message alerts-->
         {% if messages %}
         {% for message in messages %}
             {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
@@ -24,6 +28,8 @@
             {% endif %}
         {% endfor %}
         {% endif %}
+
+        <!--Profile edit form-->
         <form method="post">
             {% csrf_token %}
             <div class="form-group col-md-6 d-inline-block">

@@ -6,7 +6,10 @@
 
 <div class="row justify-content-md-center pt-3">
     <div class="col-12 col-md-8">
+        <!--Title-->
         <h1>Contact us</h1>
+
+        <!--Message alerts-->
         {% if messages %}
         {% for message in messages %}
         <div class="alert alert-success" role="alert">
@@ -14,7 +17,9 @@
         </div>
         {% endfor %}
         {% endif %}
+
         <div class="row">
+            <!--Contact form-->
             <div class="col-12 col-md-6 d-inline-block pb-5">
                 <h3>Form</h3>
                 <form role="form" method="POST" action="{% url 'contact' %}">
@@ -26,6 +31,7 @@
                 </form>
             </div>
             
+            <!--Contact/support information-->
             <div class="col-12 col-md-6 d-inline-block pb-5">
                 <h3>Information</h3>
                 <p class="footer-paragraph pt-3"><i class="far fa-envelope"></i> info@uberhosting.com</p>

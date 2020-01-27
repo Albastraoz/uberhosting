@@ -1,18 +1,27 @@
+<!--Loads all the available packages-->
 <div class="row justify-content-lg-center background-grey package-row pb-4">
 {% for package in packages %}
     <div class="package-box">
+
+        <!--Checks if packages has highlighted for header-->
         {% if package.highlight %}
         <div class="package-header package-header-highlight">
         {% else %}
         <div class="package-header">
         {% endif %}
+
+            <!--Name-->
             <h3>{{ package.name }}</h3>
         </div>
+
+        <!--Checks if packages has highlighted for content-->
         {% if package.highlight %}
         <div class="package-content package-content-highlight">
         {% else %}
         <div class="package-content">
         {% endif %}
+            
+            <!--Content of packages-->
             <div class="text-center">
                 <p class="d-inline-block mb-0"><span class="price-package">€ {{ package.price }}</span> /mo</p>
             </div>          
