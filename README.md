@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/Albastraoz/uberhosting.svg?branch=master)](https://travis-ci.com/Albastraoz/uberhosting)
 ## Uber hosting.
 
 After the 3th milestoneproject with Flask I helped some friends with finding a decent hosting provider.
@@ -7,7 +8,7 @@ So far the website has a good look and is ready to use while there is still a wi
 
 To get admin access to the website use the following login:
 username: admin
-password: admin123
+password: adminuber
 
 Hosted on [Heroku](https://uber-hosting.herokuapp.com/)
 Repository on [GitHub](https://github.com/Albastraoz/uberhosting)
