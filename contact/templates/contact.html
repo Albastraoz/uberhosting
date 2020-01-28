@@ -22,7 +22,7 @@
             <!--Contact form-->
             <div class="col-12 col-md-6 d-inline-block pb-5">
                 <h3>Form</h3>
-                <form role="form" method="POST" action="{% url 'contact' %}">
+                <form method="POST" action="{% url 'contact' %}">
                     <div class="form-group">
                         {% csrf_token %}
                         {{ contact_form|as_bootstrap }}
