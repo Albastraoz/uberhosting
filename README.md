@@ -5,8 +5,8 @@ This gave me the idea to create a hosting providers website which I can build ou
 The goal is to have the option to buy and choose a hosting service and find information (news items) about what has changes.
 So far the website has a good look and is ready to use while there is still a wide area to explore and include into the project.
 
-To get admin access to the website use the following login:
-username: admin
+To get admin access to the website use the following login:  
+username: admin  
 password: adminuber
 
 Hosted on [Heroku](https://uber-hosting.herokuapp.com/)
@@ -157,7 +157,7 @@ Preview was send regularly to people within my social circle and asked for testi
 4. If possible implement solution to error or improve product.
 
 ### Dev tools
-- Everything has been tested and works correctly except for some minor bugs.
+- Everything has been tested and works correctly.
 
 ### Coding error testing
 After complete product start to addres coding errors:
@@ -218,9 +218,9 @@ All images direct location:
 ### Acknowledgements
 Thank you to the following for inspiration, motivation and the direction I needed:
 
-- Seun Owonikoko    @seun_mentor
-- Anna Greaves      @anna_ci
+- Seun Owonikoko - @seun_mentor
+- Anna Greaves - @anna_ci
 - Yung-Chin Huang
 - Code Institute
-- Pretty Printed    Tutorials
-- Google            Your best friend
+- Pretty Printed - Tutorials
+- Google - Your best friend
