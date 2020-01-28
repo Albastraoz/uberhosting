@@ -208,20 +208,19 @@ The images for the website are copyright free and taken from:
 - [Wikipedia](https://www.wikipedia.org/)
 - [Pexels](https://www.pexels.com/)
 - [Needpix](https://www.needpix.com/)
-- [Flickr](https://www.flickr.com/)
 
 All images direct location:
 - [intro.jpg](https://www.needpix.com/photo/619074/planet-earth-globe-space-world-continents-blue-light)
 - [datacenter.jpg](https://commons.wikimedia.org/wiki/File:Wikimedia_Foundation_Servers-8055_35.jpg)
 - [aboutus.jpg](https://www.pexels.com/photo/analysis-brainstorming-business-business-group-466733/)
-- [contact.jpg](https://www.flickr.com/photos/ervins_strauhmanis/14562090039)
 - [newspaper.jpg](https://www.pexels.com/photo/folded-newspapers-158651/)
 
 ### Acknowledgements
 Thank you to the following for inspiration, motivation and the direction I needed:
 
 - Seun Owonikoko    @seun_mentor
+- Anna Greaves      @anna_ci
 - Yung-Chin Huang
 - Code Institute
-- Pretty Printed - great tutorials
-- Google - your best friend
+- Pretty Printed    Tutorials
+- Google            Your best friend
