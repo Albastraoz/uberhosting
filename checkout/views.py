@@ -1,5 +1,6 @@
 from django.shortcuts import render, reverse, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
+from django.core.mail import send_mail
 from django.contrib import messages
 from .forms import MakePaymentForm, OrderForm, SecondOrderForm
 from .models import OrderLineItem
@@ -51,7 +52,11 @@ def checkout(request):
                 messages.error(request, "Your card was declined!")
 
             if customer.paid:
-                messages.success(request, "You have successfully paid")
+                user = request.user
+                package = get_object_or_404(Package, pk=id)
+                send_mail('Uber hosting order details', 'Congratulations\r\n\r\nYou have succesfully ordered your hosting package and will receive further information within the next 24 hours.\r\n\r\nName: {0} {1}\r\nYour package: {2}\r\nPaid amount: €{3}'.format(order.first_name, order.last_name, package.name, total), 'rkaal7@gmail.com', [user.email], fail_silently=False)
+                
+                messages.success(request, "You have successfully paid! An email has been send to you with further information.")
                 request.session['cart'] = {}
                 return redirect(reverse('profile'))
             else:
