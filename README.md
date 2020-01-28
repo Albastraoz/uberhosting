@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.com/Albastraoz/uberhosting.svg?branch=master)](https://travis-ci.com/Albastraoz/uberhosting)
 ## Uber hosting.
 
 After the 3th milestoneproject with Flask I helped some friends with finding a decent hosting provider.
@@ -29,7 +28,7 @@ Expected users of the website are people who want to host their website somewher
 ### Design
 ![Website Logo - Uber](/static/images/logo.png)
 - Colour scheme is green with black which gives a more darker feeling which is easy to read but still stands out.
-    - Main green colour:   ![#10DE0C](https://placehold.it/15/#10DE0C/000000?text=+) `#10DE0C`
+    - Main green colour:   ![#10DE0C](https://placehold.it/15/10DE0C/FFFFFF?text=+) `#10DE0C`
     - Black has been used as other main color to give a more darker 'nerdy' look.
     - Grey and white colours have been used to create visible difference
 - [Custom designed logo](/static/images/logo.png) created using the following font: 
@@ -125,7 +124,7 @@ This project makes use of:
     - Project runs on Python
 - [Django](https://www.djangoproject.com/)
     - Django framework is used for website functionality
-- [AtlasMongoDB](https://www.postgresql.org/)
+- [PostgreSQL](https://www.postgresql.org/)
     - A PostgreSQL database is used to store information
 - [Google Chrome](https://www.google.com/chrome/)
     - Used for browser and dev tools
@@ -144,7 +143,10 @@ This project makes use of:
 
 ## Testing
 
-The website was tested by users, Chrome/Firefox dev tools and for errors on W3.
+The website was tested by users, Chrome/Firefox dev tools, errors on W3 and django tests which you can see in Travis CI.
+
+### Travis CI
+[![Build Status](https://travis-ci.com/Albastraoz/uberhosting.svg?branch=master)](https://travis-ci.com/Albastraoz/uberhosting)
 
 ### User experience testing 
 Preview was send regularly to people within my social circle and asked for testing.
